@@ -13,3 +13,22 @@
  *= require_tree .
  *= require_self
  */
+
+ .welcome_msg{
+    font-family: 'Oleo Script', cursive;
+    text-transform: uppercase;
+ }
+
+ .sign_in_btns .btn{
+   width: 80%;
+   font-size: 18px;
+   text-transform: uppercase;
+   font-weight: 700;
+   border-radius: 22px;
+   padding: 10px;
+ }
+
+ .sign_in_btns{
+   position: relative;
+   top: 100px;
+ }
