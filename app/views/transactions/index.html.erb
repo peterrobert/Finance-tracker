@@ -1,1 +1,9 @@
-<%= link_to "Add new", transactions_path , :class => "btn btn-primary" %>
+ <% @transaction.each do |t| %>
+  <span> <%= t.name %> </span> <span> <%= t.amount %> </span>
+  <br>
+ <% end %>
+ 
+<br>
+
+
+<%= link_to "Add new", new_transaction_path , :class => "btn btn-danger" %>
