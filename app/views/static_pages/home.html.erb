@@ -9,7 +9,7 @@
   </div>
 
 <div class="user_name text-center">
-<%= current_user.email %>
+<%= current_user.name %>
 </div>
     
 </section>
@@ -18,7 +18,7 @@
 <ul>
 
 <li>
-<%= link_to "All My transactions", "#", :class => "btn" %>
+<%= link_to "All My transactions", transactions_path , :class => "btn" %>
 </li>
 <li>
 <%= link_to "All my External Transactions", "#", :class => "btn" %>
