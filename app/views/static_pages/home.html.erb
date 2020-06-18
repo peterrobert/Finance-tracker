@@ -1,16 +1,34 @@
-<div class="jumbotron text-center">
-     <h1 class="welcome_msg">welcome to open items financial tracker</h1>
+<div class="profile_page container">
+<div class="log_out_btn text-right">
+<%= link_to "Log Out", destroy_user_session_path, :class => "btn btn-danger", method: :delete %>
 </div>
 
-<div class="sign_in_btns">
- <div class="container">
- <div class="row">
- <div class="col-md-6">
-   <%= link_to("sign in", new_user_session_path, class: "btn btn-primary")%>
- </div>
- <div class="col-md-6">
-  <%= link_to("sign up", new_user_registration_path, class: "btn btn-success")%>
- </div>
- </div>
- </div>
+<section class="profile_image">
+  <div class="avator_image text-center">
+    <%= image_tag("avatar.jpg", :alt => "avator") %>
+  </div>
+
+<div class="user_name text-center">
+<%= current_user.email %>
+</div>
+    
+</section>
+
+<section class="menu">
+<ul>
+
+<li>
+<%= link_to "All My transactions", "#", :class => "btn" %>
+</li>
+<li>
+<%= link_to "All my External Transactions", "#", :class => "btn" %>
+</li>
+<li>
+<%= link_to "All groups", "#", :class => "btn" %>
+</li>
+
+</ul>
+
+</section>
+
 </div>

@@ -18,17 +18,43 @@
     font-family: 'Oleo Script', cursive;
     text-transform: uppercase;
  }
-
- .sign_in_btns .btn{
-   width: 80%;
-   font-size: 18px;
-   text-transform: uppercase;
-   font-weight: 700;
-   border-radius: 22px;
-   padding: 10px;
+ 
+ ul{
+   list-style: none;
  }
 
- .sign_in_btns{
-   position: relative;
-   top: 100px;
+ body{
+   background-color: #3778c2 !important;
+ }
+
+ .profile_image{
+   width: 100%;
+   margin-top: 25px;
+ }
+
+ .profile_image img{
+  border-radius: 50%;
+  height: 100px;
+  width: 100px;
+ }
+
+ .log_out_btn {
+   margin-top: 20px;
+ }
+
+ .log_out_btn .btn{
+  text-transform: uppercase;
+  font-weight: 800;
+ }
+
+ .user_name {
+  font-size: 20px;
+  text-transform: capitalize;
+  color: #fff;
+  font-weight: 800;
+  padding-top: 20px;
+ }
+
+ .menu li {
+  padding: 20px;
  }
