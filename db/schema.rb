@@ -10,11 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_06_18_190514) do
+ActiveRecord::Schema.define(version: 2020_06_19_072259) do
 
   create_table "groups", force: :cascade do |t|
     t.string "name"
     t.string "icon"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.integer "user_id"
+  end
+
+  create_table "trans_groups", force: :cascade do |t|
+    t.integer "transaction_id"
+    t.integer "group_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
