@@ -1,3 +1,5 @@
+<div class="form_app container">
+<h2>new transaction</h2>
 <%= form_for @transaction do |f| %>
     <%= f.label :name %><br />
     <%= f.text_field :name %><br />
@@ -6,5 +8,6 @@
     <%= f.number_field :amount %><br />
 
 
-    <%= f.submit %>
+    <%= f.submit class: "submit text-center btn btn-primary" %>
 <% end %>
+</div>

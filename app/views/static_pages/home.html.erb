@@ -10,21 +10,22 @@
 
 <div class="user_name text-center">
 <%= current_user.name %>
-</div>
-    
+</div> 
 </section>
 
 <section class="menu">
 <ul>
 
 <li>
-<%= link_to "All My transactions", transactions_path , :class => "btn" %>
+   <i class="fa fa-cog" aria-hidden="true"></i><%= link_to "All My transactions", transactions_path , :class => "btn" %>
 </li>
+<hr>
 <li>
-<%= link_to "All my External Transactions", "#", :class => "btn" %>
+ <i class="fa fa-map-marker" aria-hidden="true"></i> <%= link_to "All my External Transactions", "#", :class => "btn" %>
 </li>
+<hr>
 <li>
-<%= link_to "All groups", "#", :class => "btn" %>
+<i class="fa fa-plus-square" aria-hidden="true"></i> <%= link_to "All groups", "#", :class => "btn" %>
 </li>
 
 </ul>
