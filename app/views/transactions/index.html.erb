@@ -1,9 +1,48 @@
- <% @transaction.each do |t| %>
-  <span> <%= t.name %> </span> <span> <%= t.amount %> </span>
-  <br>
- <% end %>
- 
+<section class="transaction_header">
+<div class="container t-d">
+<div class="button">
+<i class="fa fa-bars" aria-hidden="true"></i>
+</div>
+<div class="title">
+Transactions
+</div>
+
+<div class="search">
+<i class="fa fa-search" aria-hidden="true"></i>
+</div>
+</div>
+
+<h3 class ="text-center">most recent</h3>
+
+</section>
+<section class="transaction_body">
+<div class="container t-c">
+
+<% @transaction.each do |t| %>
+<div class="card mb-3">
+  <div class="row no-gutters">
+    <div class="col-md-4">
+      <%= image_tag("avatar.jpg", :alt => "avator", :class => "trans_image") %>
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title"> <%= t.name %> </h5>
+        <p class="card-text"> <span>$</span> <%= t.amount %></p>
+        <p class="card-text"><small class="text-muted"><%= t.created_at %></small></p>
+      </div>
+    </div>
+  </div>
+</div>
+<% end %>
+</div>
+
 <br>
 
 
-<%= link_to "Add new", new_transaction_path , :class => "btn btn-danger" %>
+<br>
+<%= link_to "Add new", new_transaction_path , :class => "btn btn-success  new_trans" %>
+</section>
+
+
+
+

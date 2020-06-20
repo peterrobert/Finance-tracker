@@ -149,3 +149,67 @@ form textarea {
 .menu hr{
   background-color: #fff;
 }
+
+.t-d{
+  display: flex;
+  font-size: 25px;
+  color: #fff;
+}
+
+.t-d .button{
+  flex: 1;
+}
+
+.t-d .title{
+  flex: 1;
+  text-align: center;
+  font-family: 'Odibee Sans', cursive;
+  font-size: 28px;
+  text-transform: uppercase;
+}
+
+.t-d .search{
+  flex: 1;
+}
+
+.t-d .search i {
+  position: relative;
+  left: 80%;
+}
+
+.transaction_header{
+  margin-top: 15px;
+}
+
+.transaction_header h3{
+   margin-top: 20px;
+    color: #fff;
+    font-family: 'Odibee Sans', cursive;
+    font-size: 28px;
+    text-transform: capitalize;
+    margin-bottom: 20px;
+}
+
+.transaction_body{
+  background-color: #fff;
+  min-height: 467px;
+}
+
+.new_trans{
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+  border-radius: unset !important;
+  text-transform: uppercase;
+}
+
+.t-c{
+  position: relative;
+  top: 20px;
+}
+
+.trans_image{
+  height: 125px;
+  margin-left: 16px;
+  margin-top: 6px;
+}

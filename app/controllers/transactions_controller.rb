@@ -2,7 +2,7 @@ class TransactionsController < ApplicationController
     before_action :authenticate_user!
 
     def index
-        @transaction = Transaction.all
+        @transaction = Transaction.all.sort_by(&:created_at).reverse
     end
 
     def new
@@ -24,8 +24,6 @@ class TransactionsController < ApplicationController
 
     end
     
-
-
     private
 
     def transaction_params
