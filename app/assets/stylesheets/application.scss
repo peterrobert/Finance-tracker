@@ -209,7 +209,32 @@ form textarea {
 }
 
 .trans_image{
-  height: 125px;
-  margin-left: 16px;
-  margin-top: 6px;
+  height: 100px;
+  margin-left: 10px;
+  margin-top: 18px;
+}
+
+.total_amount_sec{
+  height: 50px;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.amount_title{
+  flex: 1;
+  text-align: left;
+  text-transform: capitalize;
+  padding-left: 20px;
+  margin-top: 15px;
+  font-weight: 800;
+}
+
+.actual_total_amount{
+  flex: 1;
+  text-align: right;
+  text-transform: capitalize;
+  padding-right: 20px;
+  margin-top: 15px;
+  font-weight: 800;
 }
