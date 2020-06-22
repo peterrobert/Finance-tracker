@@ -1,0 +1,49 @@
+<section class="transaction_header">
+<div class="container t-d">
+<div class="button">
+<i class="fa fa-bars" aria-hidden="true"></i>
+</div>
+<div class="title">
+Groups
+</div>
+
+<div class="search">
+<i class="fa fa-search" aria-hidden="true"></i>
+</div>
+</div>
+
+<h3 class ="text-center">most recent</h3>
+
+</section>
+
+<section class="transaction_body">  
+<div class="container t-c">
+
+<% @groups.each do |g| %>
+<div class="card mb-3">
+  <div class="row no-gutters">
+    <div class="col-md-4 grp-icn">
+      <i class= "<%= g.icon %>" ></i>
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title"> <%= g.name %> </h5>
+        
+        <p class="card-text"><small class="text-muted"><%= g.created_at %></small></p>
+      </div>
+    </div>
+  </div>
+</div>
+<% end %>
+</div>
+
+<br>
+
+
+<br>
+<%= link_to "Add new", new_group_path , :class => "btn btn-success  new_trans" %>
+</section>
+
+
+
+

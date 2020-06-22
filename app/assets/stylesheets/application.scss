@@ -40,6 +40,7 @@
 .input, form input[type=text], form input[type=email] , form input[type=datetime_field], 
 form input[type=password],
 form input[type=number],
+.field select,
 form textarea {
   width: 100%;
   -moz-box-sizing: border-box;
@@ -237,4 +238,21 @@ form textarea {
   padding-right: 20px;
   margin-top: 15px;
   font-weight: 800;
+}
+
+.icons_grp i{ 
+    font-size: 22px;
+    padding-left: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.grp-icn i{
+  font-size: 60px;
+  padding: 22px;
+}
+
+.field_with_errors{
+  color: red;
+  z-index: 1000;
 }

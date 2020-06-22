@@ -7,6 +7,11 @@
     <%= f.label :amount %><br />
     <%= f.number_field :amount %><br />
 
+    <div class="field">
+    <%= f.label :group %><br>
+    <%= f.collection_select :group_id, Group.all, :id, :name %>
+  </div>
+
 
     <%= f.submit class: "submit text-center btn btn-primary" %>
 <% end %>
