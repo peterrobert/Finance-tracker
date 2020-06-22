@@ -31,8 +31,9 @@ Transactions
 <% @transaction.each do |t| %>
 <div class="card mb-3">
   <div class="row no-gutters">
-    <div class="col-md-4">
-      <%= image_tag("avatar.jpg", :alt => "avator", :class => "trans_image") %>
+    <div class="col-md-4 grp-icn">
+     <i class= "<%= t.group.icon %>" ></i>
+     
     </div>
     <div class="col-md-8">
       <div class="card-body">

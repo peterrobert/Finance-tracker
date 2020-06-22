@@ -12,7 +12,18 @@ class TransactionsController < ApplicationController
 
     def create
         @transaction = current_user.transactions.new(transaction_params)
+
         if @transaction.save
+          
+          if @transaction.group_id.nil?
+
+            redirect_to home_external_path, notice: 'External expense was successfully created.'
+
+          else
+
+            redirect_to expenses_path, notice: 'Expense was successfully created.'
+
+          end
 
           redirect_to transactions_path
 
