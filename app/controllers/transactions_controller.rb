@@ -2,7 +2,8 @@ class TransactionsController < ApplicationController
     before_action :authenticate_user!
 
     def index
-        @transaction = Transaction.all.sort_by(&:created_at).reverse
+        @transaction = current_user.transactions.all.sort_by(&:created_at).reverse
+        @total =  current_user.transactions.sum(:amount)
     end
 
     def new
@@ -11,7 +12,6 @@ class TransactionsController < ApplicationController
 
     def create
         @transaction = current_user.transactions.new(transaction_params)
-    
         if @transaction.save
 
           redirect_to transactions_path
@@ -21,7 +21,6 @@ class TransactionsController < ApplicationController
           render :new
 
         end
-
     end
     
     private
