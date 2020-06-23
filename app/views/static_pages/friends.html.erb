@@ -1,13 +1,23 @@
-<%  @users.each do |user| %>
 
 <div class="container">
+
+<div class="button t-d">
+
+<%= link_to root_path do %>
+ <i class="fa fa-bars" aria-hidden="true"></i>
+<% end %>
+
+</div>
+<%  @users.each do |user| %>
+
 <div class="card cd">
   <div class="card-header usr">
     Friend: <span> <%= user.name %> </span>
    
   </div>
 </div>
-</div>
+
   
 <% end %>
 
+</div>
