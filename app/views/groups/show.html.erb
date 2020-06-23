@@ -1,9 +1,7 @@
 <section class="transaction_header">
 <div class="container t-d">
 <div class="button">
-<%= link_to root_path do %>
- <i class="fa fa-bars" aria-hidden="true"></i>
-<% end %>
+<i class="fa fa-bars" aria-hidden="true"></i>
 </div>
 <div class="title">
 Transactions
@@ -40,13 +38,11 @@ Transactions
     </div>
     <div class="col-md-8">
       <div class="card-body">
-        <h5 class="card-title trns"> <%= t.name %> </h5>
-        <p class="card-text style-up"> <span>$</span> <%= t.amount %></p>
+        <h5 class="card-title"> <%= t.name %> </h5>
+        <p class="card-text"> <span>$</span> <%= t.amount %></p>
+        <p class="card-text"> <span>created by</span> <%= t.user.name %></p>
         <p class="card-text"><small class="text-muted"><%= t.created_at %></small></p>
         
-        <%= link_to "edit", edit_transaction_path(t), :class => "btn btn-primary edit_btn" %>
-        
-        <%= link_to "delete", transaction_path(t), :class => "btn btn-danger delete_grp_btn", data: {confirm: "Are you sure?"}, :method => :delete %> 
       </div>
     </div>
   </div>

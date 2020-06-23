@@ -15,6 +15,10 @@
  */
  @import "font-awesome";
 
+ .fa.fa-bars{
+   color: #fff;
+ }
+
  .welcome_msg{
     font-family: 'Oleo Script', cursive;
     text-transform: uppercase;
@@ -248,8 +252,8 @@ form textarea {
 }
 
 .grp-icn i{
-  font-size: 60px;
-  padding: 22px;
+  font-size: 70px;
+  padding: 35px;
 }
 
 .field_with_errors{
@@ -257,7 +261,35 @@ form textarea {
   z-index: 1000;
 }
 
+.edit_btn{
+  width: 40%;
+}
+
 .delete_grp_btn{
   float: right;
   margin-bottom: 10px;
+  width: 40%;
+}
+
+.transaction_body a:hover {
+ color: unset;
+ text-decoration: unset;
+}
+
+.transaction_body .card-title{
+  text-align: center;
+  font-size: 20px;
+  font-weight: 700;
+  color: #000;
+  text-transform: capitalize;
+}
+
+.transaction_body .trns{
+  text-align: unset;
+}
+
+.style-up{
+  font-size: 20px;
+  font-weight: bold;
+  color: grey;
 }
