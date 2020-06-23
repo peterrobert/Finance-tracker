@@ -1,0 +1,14 @@
+<%= form_for @group do |f| %>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %><br />
+
+    <p class = "icons_grp">
+    <b >Icon</b><br />
+    <%= f.radio_button :icon, 'fa fa-bus' %><i class="fa fa-bus" aria-hidden="true"></i><br />
+    <%= f.radio_button :icon, 'fa fa-briefcase' %> <i class="fa fa-briefcase" aria-hidden="true"></i><br />
+    <%= f.radio_button :icon, 'fa fa-calculator' %> <i class="fa fa-calculator" aria-hidden="true"></i><br />
+   </p>
+
+
+    <%= f.submit class: "submit text-center btn btn-primary" %>
+<% end %>

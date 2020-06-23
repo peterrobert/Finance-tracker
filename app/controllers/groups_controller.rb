@@ -25,6 +25,21 @@ class GroupsController < ApplicationController
         end
     end
 
+    def edit
+        @group = current_user.groups.find(params[:id])
+    end
+
+    def update
+        @group = current_user.groups.find(params[:id])
+        if @group.update(fields_arr)
+
+          redirect_to groups_path, notice: 'Group was successfully updated.'
+        else
+          render :edit
+        end
+    end
+    
+
    # DELETE /groups/1.json
   def destroy
     @group = current_user.groups.find(params[:id])

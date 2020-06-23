@@ -20,7 +20,9 @@ Groups
 <div class="container t-c">
 
 <% @groups.each do |g| %>
+
 <div class="card mb-3">
+
   <div class="row no-gutters">
     <div class="col-md-4 grp-icn">
       <i class= "<%= g.icon %>" ></i>
@@ -30,12 +32,14 @@ Groups
         <h5 class="card-title"> <%= g.name %> </h5>
         
         <p class="card-text"><small class="text-muted"><%= g.created_at %></small></p>
-
+        
+        <%= link_to "edit",  edit_group_path(g), :class => "btn btn-primary" %>
         <%= link_to "delete", group_path(g), :class => "btn btn-danger delete_grp_btn", data: {confirm: "Are you sure?"}, :method => :delete %> 
       </div>
     </div>
   </div>
 </div>
+
 <% end %>
 </div>
 
