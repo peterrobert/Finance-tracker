@@ -50,8 +50,15 @@ class TransactionsController < ApplicationController
     def update
       @transaction = current_user.transactions.find(params[:id])
       if @transaction.update(transaction_params)
+       
+        if @transaction.group_id.nil?
 
-        redirect_to transactions_path, notice: 'transaction was successfully updated.'
+          redirect_to external_path, notice: 'external transaction was successfully updated.'
+        else
+          redirect_to transactions_path, notice: 'transaction was successfully updated.'
+        end
+        
+       
       else
         render :edit
       end
