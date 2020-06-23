@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   resources :groups
 
   get '/external', to: 'static_pages#external'
+  get '/friends', to: 'static_pages#friends'
   
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

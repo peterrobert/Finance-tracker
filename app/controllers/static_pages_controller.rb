@@ -12,6 +12,6 @@ class StaticPagesController < ApplicationController
     
     def friends
         @users = User.where.not(id: current_user.id)
-        @expenses = Expense.where.not(user_id: current_user.id)
+        @expenses = Transaction.where.not(user_id: current_user.id).all
     end
 end
