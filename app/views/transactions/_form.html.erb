@@ -1,0 +1,22 @@
+<%= form_for @transaction do |f| %>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %><br />
+
+    <%= f.label :amount %><br />
+    <%= f.number_field :amount %><br />
+
+     <div class="form-group">
+     <%= f.label 'Group' %>
+    <select id="transaction_group_id" name="transaction[group_id]" class="custom-select" id="inputGroupSelect01">
+      <option value='<%= nil%>'>None</option>
+
+      <% Group.all.each do |group| %>
+        <option value="<%= group.id %>"><%= group.name %></option>
+      <% end %>
+      
+    </select>
+   </div>
+
+
+    <%= f.submit class: "submit text-center btn btn-primary" %>
+<% end %>

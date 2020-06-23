@@ -37,10 +37,30 @@ class TransactionsController < ApplicationController
     end
 
     def edit
+
+      @transaction = current_user.transactions.find(params[:id])
       
     end
+
+    def update
+      @transaction = current_user.transactions.find(params[:id])
+      if @transaction.update(transaction_params)
+
+        redirect_to transactions_path, notice: 'transaction was successfully updated.'
+      else
+        render :edit
+      end
+   end
     
     def destroy
+
+    @transaction = current_user.transactions.find(params[:id])
+    @transaction.destroy
+   
+    respond_to do |format|
+      format.html { redirect_to transactions_url, notice: 'Transaction was successfully destroyed.' }
+      format.json { head :no_content }
+    end
       
     end
     
