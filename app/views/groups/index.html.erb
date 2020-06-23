@@ -36,10 +36,9 @@ Groups
         <h5 class="card-title"> <%= g.name %> </h5>
         
         <p class="card-text"><small class="text-muted"><%= g.created_at %></small></p>
-        
-        <%= link_to "edit",  edit_group_path(g), :class => "btn btn-primary edit_btn" %>
-        
-        <%= link_to "delete", group_path(g), :class => "btn btn-danger delete_grp_btn", data: {confirm: "Are you sure?"}, :method => :delete %> 
+        <%=  edit_delete_btn(current_user, g) %>
+      
+      
         
        
       </div>
