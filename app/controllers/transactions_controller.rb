@@ -2,8 +2,12 @@ class TransactionsController < ApplicationController
     before_action :authenticate_user!
 
     def index
-        @transaction = current_user.transactions.all.sort_by(&:created_at).reverse
-        @total =  current_user.transactions.sum(:amount)
+        @transaction = current_user.transactions.all
+        @other_transaction = @transaction.where.not(group_id: nil)
+        @other_transaction_sorted = @other_transaction.sort_by(&:created_at).reverse
+      
+        @total = @other_transaction.sum(:amount)
+        
     end
 
     def new
@@ -11,13 +15,14 @@ class TransactionsController < ApplicationController
     end
 
     def create
+
         @transaction = current_user.transactions.new(transaction_params)
 
         if @transaction.save
           
           if @transaction.group_id.nil?
 
-            redirect_to home_external_path, notice: 'Transaction expense was successfully created.'
+            redirect_to external_path, notice: 'Transaction expense was successfully created.'
 
           else
 
@@ -56,11 +61,8 @@ class TransactionsController < ApplicationController
 
     @transaction = current_user.transactions.find(params[:id])
     @transaction.destroy
-   
-    respond_to do |format|
-      format.html { redirect_to transactions_url, notice: 'Transaction was successfully destroyed.' }
-      format.json { head :no_content }
-    end
+    redirect_back(fallback_location: root_path) 
+
       
     end
     

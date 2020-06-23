@@ -6,7 +6,7 @@
 <% end %>
 </div>
 <div class="title">
-Transactions
+Extra transactions
 </div>
 
 <div class="search">
@@ -25,18 +25,18 @@ Transactions
 </div>
 
 <div class="actual_total_amount">
-  $ <%= @total %>
+  $ <%= @external_total %>
 </div>
 </div>
 <div class="container t-c">
 
-<% @other_transaction_sorted.each do |t| %>
+<% @external_user_transactions.each do |t| %>
  
 <div class="card mb-3">
   <div class="row no-gutters">
     <div class="col-md-4 grp-icn">
   
-       <i class= "<%= t.group.icon %>" ></i>
+      <i class="fa fa-file-o" aria-hidden="true"></i>
      
     </div>
     <div class="col-md-8">

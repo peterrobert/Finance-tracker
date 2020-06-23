@@ -47,10 +47,7 @@ class GroupsController < ApplicationController
     @group = current_user.groups.find(params[:id])
     @group.destroy
    
-    respond_to do |format|
-      format.html { redirect_to groups_url, notice: 'group was successfully destroyed.' }
-      format.json { head :no_content }
-    end
+    redirect_back(fallback_location: root_path) 
   end
 
     private 
