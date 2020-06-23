@@ -17,21 +17,31 @@ class TransactionsController < ApplicationController
           
           if @transaction.group_id.nil?
 
-            redirect_to home_external_path, notice: 'External expense was successfully created.'
+            redirect_to home_external_path, notice: 'Transaction expense was successfully created.'
 
           else
 
-            redirect_to expenses_path, notice: 'Expense was successfully created.'
+            redirect_to transactions_path, notice: 'Transaction was successfully created.'
 
           end
-
-          redirect_to transactions_path
 
         else
 
           render :new
 
         end
+    end
+
+    def show
+      @transaction = Transaction.find(params[:id])
+    end
+
+    def edit
+      
+    end
+    
+    def destroy
+      
     end
     
     private

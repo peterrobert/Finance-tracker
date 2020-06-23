@@ -29,7 +29,8 @@ Transactions
 <div class="container t-c">
 
 <% @transaction.each do |t| %>
-<div class="card mb-3">
+ 
+div class="card mb-3">
   <div class="row no-gutters">
     <div class="col-md-4 grp-icn">
      <i class= "<%= t.group.icon %>" ></i>
@@ -40,6 +41,7 @@ Transactions
         <h5 class="card-title"> <%= t.name %> </h5>
         <p class="card-text"> <span>$</span> <%= t.amount %></p>
         <p class="card-text"><small class="text-muted"><%= t.created_at %></small></p>
+         <%= link_to "edit", edit_transaction_path %>
       </div>
     </div>
   </div>
