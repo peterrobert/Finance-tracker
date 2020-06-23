@@ -1,4 +1,14 @@
 <%= form_for @transaction do |f| %>
+
+   <% if @transaction.errors.any? %>
+   <ul>
+   <% @transaction.errors.full_messages.each do |msg| %>
+       <li class="error"><%= msg %></li>
+   <% end %>
+    </ul>
+   <% end %>
+
+ 
     <%= f.label :name %><br />
     <%= f.text_field :name %><br />
 

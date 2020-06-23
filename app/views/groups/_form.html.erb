@@ -1,4 +1,12 @@
 <%= form_for @group do |f| %>
+
+   <% if @group.errors.any? %>
+   <ul>
+   <% @group.errors.full_messages.each do |msg| %>
+       <li class="error"><%= msg %></li>
+   <% end %>
+    </ul>
+   <% end %>
     <%= f.label :name %><br />
     <%= f.text_field :name %><br />
 
