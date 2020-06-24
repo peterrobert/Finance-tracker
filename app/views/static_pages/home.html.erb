@@ -1,40 +1,32 @@
 <div class="profile_page container">
-<div class="log_out_btn text-right">
-<%= link_to "Log Out", destroy_user_session_path, :class => "btn btn-danger", method: :delete %>
-</div>
-
-<section class="profile_image">
-  <div class="avator_image text-center">
-    <%= image_tag("avator.png", :alt => "avator") %>
+  <div class="log_out_btn text-right">
+    <%= link_to "Log Out", destroy_user_session_path, :class => "btn btn-danger", method: :delete %>
   </div>
-
-<div class="user_name text-center">
-<%= current_user.name %>
-</div> 
-</section>
-
-<section class="menu">
-<ul>
-
-<li>
-   <i class="fa fa-cog" aria-hidden="true"></i><%= link_to "All My transactions", transactions_path , :class => "btn" %>
-</li>
-<hr>
-<li>
- <i class="fa fa-map-marker" aria-hidden="true"></i> <%= link_to "All my External Transactions", external_path, :class => "btn" %>
-</li>
-<hr>
-<li>
-<i class="fa fa-plus-square" aria-hidden="true"></i> <%= link_to "All groups",  groups_path, :class => "btn" %>
-</li>
-
-<hr>
-<li>
-<i class="fa fa-plus-square" aria-hidden="true"></i> <%= link_to "friends",  friends_path, :class => "btn" %>
-</li>
-
-</ul>
-
-</section>
-
+  <section class="profile_image">
+    <div class="avator_image text-center">
+      <%= image_tag("avator.png", :alt => "avator") %>
+    </div>
+    <div class="user_name text-center">
+      <%= current_user.name %>
+    </div>
+  </section>
+  <section class="menu">
+    <ul>
+      <li>
+        <i class="fa fa-cog" aria-hidden="true"></i><%= link_to "All My transactions", transactions_path , :class => "btn" %>
+      </li>
+      <hr>
+      <li>
+        <i class="fa fa-map-marker" aria-hidden="true"></i> <%= link_to "All my External Transactions", external_path, :class => "btn" %>
+      </li>
+      <hr>
+      <li>
+        <i class="fa fa-plus-square" aria-hidden="true"></i> <%= link_to "All groups",  groups_path, :class => "btn" %>
+      </li>
+      <hr>
+      <li>
+        <i class="fa fa-plus-square" aria-hidden="true"></i> <%= link_to "friends",  friends_path, :class => "btn" %>
+      </li>
+    </ul>
+  </section>
 </div>
