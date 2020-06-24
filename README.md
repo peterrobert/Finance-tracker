@@ -43,7 +43,8 @@
    ```
 - To see the live site check here
 
-![live](https://quiet-waters-60965.herokuapp.com/groups)
+[Live Demo Link](https://quiet-waters-60965.herokuapp.com/groups)
+
 
 ## Authors  ![Hireable](https://img.shields.io/badge/HIREABLE-YES-yellowgreen&?style=for-the-badge)
 
