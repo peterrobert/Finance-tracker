@@ -2,7 +2,6 @@ AllCops:
   Exclude:
     - "db/**/*"
     - "bin/*" 
-    - "test/*"
     - "config/**/*"
     - "Guardfile"
     - "Rakefile"

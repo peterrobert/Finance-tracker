@@ -9,7 +9,6 @@ linters:
 files:
   ignore:
     - "bin/*"
-    - "test/*"
     - "db/*"
     - "config/*"
     - "Guardfile"
