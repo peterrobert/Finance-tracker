@@ -1,0 +1,311 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+ @import "font-awesome";
+
+ .fa.fa-bars{
+   color: #fff;
+ }
+
+ .welcome_msg{
+    font-family: 'Oleo Script', cursive;
+    text-transform: uppercase;
+ }
+
+ .form_app{
+  background: #fff;
+  margin-top: 60px;
+  border-radius: 12px;
+ }
+
+ form label {
+  color: #6c7c9a;
+  font-size: .9em;
+  font-weight: bold;
+  line-height: 1.5em;
+  padding-bottom: .2em;
+  display: inline-block;
+  text-transform: uppercase;
+  padding-left: .2em;
+}
+
+.input, form input[type=text], form input[type=email] , form input[type=datetime_field], 
+form input[type=password],
+form input[type=number],
+.field select,
+form textarea {
+  width: 100%;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -o-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -khtml-border-radius: 4px;
+  border-radius: 4px;
+  padding: .3em .4em;
+  border: 1px solid #ccc;
+  background-color: #f5f5f5;
+  color: #1f2d3e;
+  font-size: 1.2em;
+}
+ .form_app h2{
+  text-align: center;
+  font-size: 25px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-weight: 800;
+  text-transform: uppercase;
+ }
+ 
+ .actions{
+   text-align: center;
+ }
+
+ .submit{
+   width: 100%;
+   margin-top: 20px;
+   margin-bottom: 20px;
+   text-transform: uppercase;
+   font-size: .9em;
+  font-weight: bold;
+ }
+
+ .shared{
+   text-align: center;
+   padding-bottom: 20px;
+ }
+
+ ul{
+   list-style: none;
+ }
+
+ body{
+   background-color: #3778c2 !important;
+ }
+
+ .profile_image{
+   width: 100%;
+   margin-top: 50px;
+ }
+
+ .profile_image img{
+  border-radius: 50%;
+  height: 120px;
+  width: 120px;
+ }
+
+ .log_out_btn {
+   margin-top: 20px;
+ }
+
+ .log_out_btn .btn{
+  text-transform: uppercase;
+  font-weight: 800;
+ }
+
+ .user_name {
+  text-transform: capitalize;
+  color: #fff;
+  font-weight: 800;
+  padding-top: 20px;
+  letter-spacing: 3px;
+  font-family: 'Odibee Sans', cursive;
+  font-size: 32px;
+ }
+
+ .menu{
+  text-align: left;
+  margin-top: 30px;
+ }
+
+ .menu li {
+  padding: 20px;
+ }
+
+ .menu i{
+   font-size: 35px;
+    color: #fff;
+    position: relative;
+    top: 5px;
+ }
+
+.menu a{
+  font-family: 'Odibee Sans', cursive;
+  font-size: 30px;
+  color: #fff;
+  text-transform: capitalize;
+}
+
+.menu hr{
+  background-color: #fff;
+}
+
+.t-d{
+  display: flex;
+  font-size: 25px;
+  color: #fff;
+}
+
+.t-d .button{
+  flex: 1;
+}
+
+.t-d .title{
+  flex: 1;
+  text-align: center;
+  font-family: 'Odibee Sans', cursive;
+  font-size: 28px;
+  text-transform: uppercase;
+}
+
+.t-d .search{
+  flex: 1;
+}
+
+.t-d .search i {
+  position: relative;
+  left: 80%;
+}
+
+.transaction_header{
+  margin-top: 15px;
+}
+
+.transaction_header h3{
+   margin-top: 20px;
+    color: #fff;
+    font-family: 'Odibee Sans', cursive;
+    font-size: 28px;
+    text-transform: capitalize;
+    margin-bottom: 20px;
+}
+
+.transaction_body{
+  background-color: #fff;
+  min-height: 467px;
+}
+
+.new_trans{
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+  border-radius: unset !important;
+  text-transform: uppercase;
+}
+
+.t-c{
+  position: relative;
+  top: 20px;
+}
+
+.trans_image{
+  height: 100px;
+  margin-left: 10px;
+  margin-top: 18px;
+}
+
+.total_amount_sec{
+  height: 50px;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.amount_title{
+  flex: 1;
+  text-align: left;
+  text-transform: capitalize;
+  padding-left: 20px;
+  margin-top: 15px;
+  font-weight: 800;
+}
+
+.actual_total_amount{
+  flex: 1;
+  text-align: right;
+  text-transform: capitalize;
+  padding-right: 20px;
+  margin-top: 15px;
+  font-weight: 800;
+}
+
+.icons_grp i{ 
+    font-size: 22px;
+    padding-left: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.grp-icn i{
+  font-size: 70px;
+  padding: 35px;
+}
+
+.field_with_errors{
+  color: red;
+  z-index: 1000;
+}
+
+.edit_btn{
+  width: 40%;
+}
+
+.delete_grp_btn{
+  float: right;
+  margin-bottom: 10px;
+  width: 40%;
+}
+
+.transaction_body a:hover {
+ color: unset;
+ text-decoration: unset;
+}
+
+.transaction_body .card-title{
+  text-align: center;
+  font-size: 20px;
+  font-weight: 700;
+  color: #000;
+  text-transform: capitalize;
+}
+
+.transaction_body .trns{
+  text-align: unset;
+}
+
+.style-up{
+  font-size: 20px;
+  font-weight: bold;
+  color: grey;
+}
+
+.usr{
+  text-transform: uppercase;
+  font-weight: bold;
+  font-family: 'Oleo Script', cursive;
+  font-size: 22px;
+}
+
+.cd{
+  margin-top: 10px;
+}
+
+.error{
+  font-size: 18px;
+  color: red;
+}
