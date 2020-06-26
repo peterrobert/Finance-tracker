@@ -1,4 +1,3 @@
-# rubocop:disable Style/FrozenStringLiteralComment
 # rubocop:disable Lint/UselessAssignment
 
 require 'rails_helper'
@@ -29,5 +28,4 @@ RSpec.describe Transaction, type: :model do
   end
 end
 
-# rubocop:enable Style/FrozenStringLiteralComment
 # rubocop:enable Lint/UselessAssignment

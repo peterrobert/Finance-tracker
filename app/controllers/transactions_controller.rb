@@ -57,7 +57,7 @@ class TransactionsController < ApplicationController
     else
       render :edit
     end
- end
+  end
 
   def destroy
     @transaction = current_user.transactions.find(params[:id])

@@ -1,3 +1,5 @@
+# rubocop:disable Style/GuardClause
+
 module GroupsHelper
   def edit_delete_btn(user, group)
     if group.user_id == user.id
@@ -11,3 +13,5 @@ module GroupsHelper
     end
   end
 end
+
+# rubocop:enable Style/GuardClause

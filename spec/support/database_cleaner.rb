@@ -1,5 +1,3 @@
-# rubocop:disable Style/FrozenStringLiteralComment
-
 RSpec.configure do |config|
   config.before(:suite) do
     DatabaseCleaner.clean_with :truncation, except: %w[ar_internal_metadata]
@@ -17,5 +15,3 @@ RSpec.configure do |config|
     DatabaseCleaner.clean
   end
 end
-
-# rubocop:enable Style/FrozenStringLiteralComment
